@@ -1,0 +1,70 @@
+<footer class="footer">
+  <div class="footer-body container">
+    <!-- Logo -->
+    <div class="row footer-logo-row">
+      <div class="col-md-12">
+        <%= link to: webapp_url(@conn), class: "footer-brand" do %>
+          <img class="footer-logo" src="<%= static_path(@conn, logo_footer()) %>" alt="<%= subnetwork_title() %>" />
+          <%= if logo_text() do %>
+            <span class="logo-text in-footer"> <%= logo_text() %> </span>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <% other_explorers = other_explorers() %>
+    <% col_size = if Enum.empty?(other_explorers), do: 3, else: 2 %>
+
+    <div class="row">
+      <div class="col-xs-12 col-lg-3">
+        <p class="footer-info-text"><%= gettext("Liquidchain Explorer is a tool for inspecting and analyzing Liquidchain Network.") %></p>
+        <div class="footer-social-icons">
+          <a href="https://github.com/Liquidchain" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
+            <div class="footer-social-icon-container fontawesome-icon github"></div>
+          </a>
+          <a href="https://twitter.com/LiquidChainXLC" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Twitter") %>'>
+            <div class="footer-social-icon-container fontawesome-icon twitter"></div>
+          </a>
+          <a href="https://t.me/LiquidchainChat" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Telegram") %>'>
+            <div class="footer-social-icon-container fontawesome-icon telegram"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
+        <h3>Liquidchain</h3>
+        <ul>
+          <li><a href="https://liquidchain.net/" rel="noreferrer" class="footer-link"><%= gettext("Website") %></a></li>
+          <li><a href="https://swap.liquidchain.net/" rel="noreferrer" class="footer-link"><%= gettext("Exchange") %></a></li>
+          <li><a href="https://docs.liquidchain.net/" rel="noreferrer" class="footer-link"><%= gettext("Docs") %></a></li>
+        </ul>
+      </div>
+      
+	  <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
+          <h3><%= gettext("Connect") %></h3>
+          <ul>
+            <li><a href="https://docs.liquidchain.net/connect-to-metamask" rel="norefferer" class="footer-link"><%= gettext("Metamask") %></a></li>
+          </ul>
+      </div>
+
+      <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
+          <h3><%= gettext("Developers") %></h3>
+          <ul>
+            <li><a href="https://remix.ethereum.org/" rel="noreferrer" class="footer-link"><%= gettext("IDE") %></a></li>
+          </ul>
+      </div>
+
+      <%= unless Enum.empty?(other_explorers) do %>
+        <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
+          <h3><%= gettext("Other Explorers") %></h3>
+          <ul>
+            <%= for {name, url} <- other_explorers do %>
+              <li><a href="<%= url %>" rel="noreferrer" class="footer-link"> <%= name %> </a></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+	
+  </div>
+</footer>
