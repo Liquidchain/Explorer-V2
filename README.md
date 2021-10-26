@@ -2,5 +2,5 @@
 
 (Forked from Blockscout)
 
-# Testnet Explorer: https://testnet.xlcscan.com
+# Explorer: https://xlcscan.com
  

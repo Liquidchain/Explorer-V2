@@ -2951,7 +2951,7 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/templates/chain/show.html.eex:161
 msgid "Wallet addresses"
-msgstr "XLC holders"
+msgstr "Total addresses"
 
 #, elixir-format
 #: lib/block_scout_web/templates/stakes/_stakes_modal_claim_reward_content.html.eex:2
@@ -3212,7 +3212,12 @@ msgstr ""
 msgid "CRC Worth"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/block_scout_web/templates/address_token/overview.html.eex:66
 msgid "Shows the total CRC balance in the address."
+msgstr ""
+
+#, elixir-format
+#: lib/block_scout_web/templates/block/overview.html.eex:110
+msgid "N/A bytes"
 msgstr ""
