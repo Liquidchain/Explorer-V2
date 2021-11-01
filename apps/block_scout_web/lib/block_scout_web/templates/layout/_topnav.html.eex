@@ -25,12 +25,6 @@
               <%= link to: blocks_path(@conn, :index), class: "dropdown-item #{tab_status("blocks", @conn.request_path)}" do %>
                 <%= gettext("Blocks") %>
               <% end %>
-              <%= link to: uncle_path(@conn, :uncle), class: "dropdown-item #{tab_status("uncles", @conn.request_path)}" do %>
-                <%= gettext("Uncles") %>
-              <% end %>
-              <%= link to: reorg_path(@conn, :reorg), class: "dropdown-item #{tab_status("reorgs", @conn.request_path)}" do %>
-                <%= gettext("Forked Blocks (Reorgs)") %>
-              <% end %>
             </div>
           </li>
           <li class="nav-item dropdown">            <li class="nav-item dropdown" id="activeTransactions">
@@ -109,6 +103,7 @@
                       class: "dropdown-item #{tab_status("accounts", @conn.request_path)}",
                       to: address_path(@conn, :index)
                     ) %>
+				<a class="dropdown-item" target="_blank" href="https://bridge.liquidchain.net/">Liquidchain Bridge</a>
               </div>
             </li>
           <% end %>
@@ -182,7 +177,7 @@
             <a class="dropdown-item header division">Mainnets</a> 
               <a class="dropdown-item" href="https://xlcscan.com/">Liquidchain Mainnet</a>
             <a class="dropdown-item header division">Testnets</a> 
-              <a class="dropdown-item" href="https://testnet.xlcscan.com/">Liquidchain Testnet</a>
+              <a class="dropdown-item" target="_blank" href="https://testnet.xlcscan.com/">Liquidchain Testnet</a>
           </div>
         </li>
       </ul>
