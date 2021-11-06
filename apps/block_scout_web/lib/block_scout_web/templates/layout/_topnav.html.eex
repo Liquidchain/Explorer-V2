@@ -104,6 +104,7 @@
                       to: address_path(@conn, :index)
                     ) %>
 				<a class="dropdown-item" target="_blank" href="https://bridge.liquidchain.net/">Liquidchain Bridge</a>
+				<a class="dropdown-item" target="_blank" href="https://locker.liquidchain.net/">Token Locker</a>
               </div>
             </li>
           <% end %>
